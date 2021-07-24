@@ -24,15 +24,15 @@ app.use(express.urlencoded({ extended: true }));
 // Db Models
 const db = require('./models');
 if (process.nev.NODE_ENV === 'development') {
-    db.sequelize.sync({ force: true }).then(() => {
-        console.log("Drop and re-sync db.");
-      });
+  db.sequelize.sync({ force: true }).then(() => {
+    console.log('Drop and re-sync db.');
+  });
 } else {
-    db.sequelize.sync();
-};
+  db.sequelize.sync();
+}
 
 app.use('/api/v1/movies', movies);
-app.use('/api/v1/reviews' reviews);
+app.use('/api/v1/reviews', reviews);
 
 // port settings.
 const PORT = process.env.PORT || 5000;
