@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const axios = require('axios');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -23,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Db Models
 const db = require('./models');
-if (process.nev.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   db.sequelize.sync({ force: true }).then(() => {
     console.log('Drop and re-sync db.');
   });
