@@ -8,6 +8,6 @@ const router = express.Router();
 
 router.route('/').get(getAllMovies);
 
-router.route('/:id').get(getProgram);
+// router.route('/:id').get(getMovie);
 
 module.exports = router;

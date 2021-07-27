@@ -8,7 +8,7 @@ dotenv.config({ path: './config/config.env' });
 
 // Route Files
 const movies = require('./routes/movies');
-const reviews = require('./routes/reviews');
+// const reviews = require('./routes/reviews');
 
 const app = express();
 
@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1/movies', movies);
-app.use('/api/v1/reviews', reviews);
+// app.use('/api/v1/reviews', reviews);
 
 // port settings.
 const PORT = process.env.PORT || 5000;
