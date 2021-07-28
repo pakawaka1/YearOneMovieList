@@ -27,7 +27,7 @@ exports.getOneMovie = async (id) => {
       params: { i: id, r: 'json' },
       headers: HEADERS,
     });
-    console.log(idResponse.data);
+    return idResponse.data;
   } catch (err) {
     console.error(err);
   }
