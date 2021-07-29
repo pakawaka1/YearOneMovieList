@@ -24,13 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Db Models
 const db = require('./models');
-if (process.env.NODE_ENV === 'development') {
-  db.sequelize.sync({ force: true }).then(() => {
-    console.log('Drop and re-sync db.');
-  });
-} else {
-  db.sequelize.sync();
-}
+db.sequelize.sync();
 
 app.use('/api/v1/movies', movies);
 app.use('/api/v1/reviews', reviews);

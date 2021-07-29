@@ -20,7 +20,7 @@ exports.getAllMovies = async (searchItem) => {
 
 exports.getOneMovie = async (id) => {
   // check if passing id as a parameter
-  id = 'tt4154796';
+  id = 'tt5154746';
   try {
     const idResponse = await axios.get(URL, {
       params: { i: id, r: 'json' },

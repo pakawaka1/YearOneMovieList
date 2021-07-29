@@ -2,26 +2,27 @@ const movie = require('./movies');
 const db = require('../models');
 const Review = db.reviews;
 
-exports.getAllReviews = async (req, res) => {
+exports.getMovieReview = async (req, res) => {
   const movieData = await movie.getOneMovie();
-  const review = await Review.findOrCreate({
+  const review = await Review.findOne({
     where: { title: movieData.Title },
-    defaults: { thumbsUp: 0, thumbsDown: 0 },
   });
-  res.status(200).json({ success: true, data: review });
+  return res.status(200).json({ success: true, data: movieData, review });
 };
 
 exports.addNewReview = async (req, res) => {
-  // let review = await Review.findByPk(req.params.id);
-  // review = await Review.update(
-  //   { thumbsUp: req.body.thumbsUp } || { thumbsDown: req.body.thumbsDown },
-  //   { returning: true, where: { title: req.body.title } }
-  // );
-  // res
-  //   .status(200)
-  //   .json({
-  //     success: true,
-  //     msg: `Thank you for adding your review to the movie ${req.body.title}`,
-  //     data: review,
-  //   });
+  const movieData = await movie.getOneMovie();
+  const [review, created] = await Review.findOrCreate({
+    where: { title: movieData.Title },
+    defaults: { thumbsUp: 0, thumbsDown: 0 },
+  });
+  if (req.body.thumbsUp !== undefined) review.thumbsUp++;
+  if (req.body.thumbsDown !== undefined) review.thumbsDown++;
+  await review.save();
+  return res.status(200).json({
+    success: true,
+    msg: `Thank you for adding your review to the movie called ${review.title}`,
+    data: movieData,
+    review,
+  });
 };
