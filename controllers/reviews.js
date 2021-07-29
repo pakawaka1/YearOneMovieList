@@ -2,7 +2,7 @@ const movie = require('./movies');
 const db = require('../models');
 const Review = db.reviews;
 
-exports.getMovieReview = async (req, res) => {
+exports.getMovieReview = async (res) => {
   const movieData = await movie.getOneMovie();
   const review = await Review.findOne({
     where: { title: movieData.Title },

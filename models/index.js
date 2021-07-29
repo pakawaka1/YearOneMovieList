@@ -19,7 +19,6 @@ const db = {};
 db.sequelize = sequelize;
 db.DataTypes = DataTypes;
 
-db.movies = require('./Movie.js')(sequelize, DataTypes);
 db.reviews = require('./Review.js')(sequelize, DataTypes);
 
 module.exports = db;
