@@ -1,18 +1,15 @@
 module.exports = (sequelize, DataTypes) => {
-  const Review = sequelize.define(
-    'review',
-    {
-      thumbsUp: {
-        type: DataTypes.REAL,
-      },
-      thumbsDown: {
-        type: DataTypes.REAL,
-      },
+  const Review = sequelize.define('review', {
+    title: {
+      type: DataTypes.STRING,
+      required: true,
     },
-    {}
-  );
-  Review.associate = (models) => {
-    Review.belongsTo(models.Movie, { foreignKey: 'imdbId', as: 'movie' });
-  };
+    thumbsUp: {
+      type: DataTypes.INTEGER,
+    },
+    thumbsDown: {
+      type: DataTypes.INTEGER,
+    },
+  });
   return Review;
 };

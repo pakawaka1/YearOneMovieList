@@ -4,7 +4,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       title: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       year: {
         type: DataTypes.STRING,
