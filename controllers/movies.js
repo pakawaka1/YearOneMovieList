@@ -6,14 +6,13 @@ const HEADERS = {
 };
 
 exports.getAllMovies = async (searchItem) => {
-  searchItem = 'hero';
   /// check if passing searchItem as a parameter
   try {
     const searchResponse = await axios.get(URL, {
       params: { s: searchItem, r: 'json' },
       headers: HEADERS,
     });
-    console.log(searchResponse.data);
+    return searchResponse.data;
   } catch (err) {
     console.error(err);
   }
@@ -21,13 +20,13 @@ exports.getAllMovies = async (searchItem) => {
 
 exports.getOneMovie = async (id) => {
   // check if passing id as a parameter
-  id = 'tt4154798';
+  id = 'tt5154746';
   try {
     const idResponse = await axios.get(URL, {
       params: { i: id, r: 'json' },
       headers: HEADERS,
     });
-    console.log(idResponse.data);
+    return idResponse.data;
   } catch (err) {
     console.error(err);
   }
