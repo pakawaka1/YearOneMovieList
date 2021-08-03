@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const axios = require('axios');
+const path = require('path');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -21,6 +22,9 @@ app.use(cors(corsOptions));
 // Parse incomings data requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// set static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Db Models
 const db = require('./models');
