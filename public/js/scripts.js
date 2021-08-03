@@ -1,8 +1,9 @@
-const movie = require('../../controllers/movies');
-const review = require('../../controllers/reviews');
+// const movie = require('../../controllers/movies');
+// const review = require('../../controllers/reviews');
 
 const input = document.querySelector('input');
-const button = document.querySelector('button');
+const getMovieButton = document.getElementById('getMovieButton');
+// const reviewMovieButton = document.getElementById('reviewMovieButton');
 
 const showAllMovies = () => {
   // debounce here.......
@@ -15,4 +16,5 @@ const showOneMovie = () => {
 };
 
 input.addEventListener('keyup', showAllMovies, false);
-button.addEventListener('click', showOneMovie, false);
+getMovieButton.addEventListener('click', showOneMovie, false);
+// getMovieButton.addEventListener('click', showOneMovie, false);
