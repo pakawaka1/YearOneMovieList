@@ -9,15 +9,15 @@
 </head>
 <body>
     <!--Add alt tags and check screenreader accessibility-->
-    <form alt="movielookupform">
+    <!-- <form alt="movielookupform"> -->
         <label for="movieTitle" >Titile of Movie:</label>
-        <input type="text" name="movieTitle"  alt="entermovietitlehere">
+        <input type="text" id='getAllMovieData' alt="entermovietitlehere">
         <button alt="clicktofindmovie" id='getMovieButton'>Get Movie Info</button>
-    </form>
+    <!-- </form> -->
     <br>
     <br>
     <section id="movieInformation">
-        <form alt="movieReviewForm">
+        <!-- <form alt="movieReviewForm"> -->
             <label for="movieReview">Movie Review:</label>
             <input type="radio" id="thumbsUp" name="review" value="thumbsUp">
             <label for="thumbsUp">Thumbs Up</label>
@@ -46,6 +46,9 @@
             </tr>
         </table>
     </section>
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/bundle.js"></script>
+
+
 </body>
 </html>
