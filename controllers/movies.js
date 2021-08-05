@@ -19,7 +19,6 @@ const HEADERS = {
 // };////////////////////////////////////////////////////////////////////////////////
 
 exports.getOneMovie = async (title) => {
-  title = 'Toy Story';
   const updatedTitle = title.replace(/\b\w/g, (c) => c.toUpperCase());
   console.log(updatedTitle);
   try {
