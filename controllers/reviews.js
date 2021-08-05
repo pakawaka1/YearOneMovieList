@@ -2,13 +2,25 @@ const movie = require('./movies');
 const db = require('../models');
 const Review = db.reviews;
 
-exports.getMovieReview = async (res) => {
+exports.getMovieReview = async (req, res) => {
   const movieData = await movie.getOneMovie();
   try {
     const review = await Review.findOne({
       where: { title: movieData.Title },
     });
-    if (review) return review.data;
+    if (movieData && review) {
+      return res.status(200).json({
+        success: true,
+        data: movieData,
+        review,
+      });
+    }
+    if (movieData && !review) {
+      return res.status(200).json({
+        success: true,
+        data: movieData,
+      });
+    }
   } catch (err) {
     console.error(err);
   }
@@ -25,7 +37,7 @@ exports.addNewReview = async (req, res) => {
     await review.save();
     return res.status(200).json({
       success: true,
-      msg: `Thank you for adding your review to the movie called ${review.title}`,
+      alert: `Thank you for adding your review to the movie called ${review.title}`,
       data: movieData,
       review,
     });

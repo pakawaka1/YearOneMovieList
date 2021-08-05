@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, 'src')));
 const db = require('./models');
 db.sequelize.sync();
 
-app.use('/api/v1/movies', movies);
-app.use('/api/v1/reviews', reviews);
+app.use('/api/v1/movie', movies);
+app.use('/api/v1/movie/reviews', reviews);
 
 // port settings.
 const PORT = process.env.PORT || 5000;
