@@ -37,7 +37,7 @@ exports.addNewReview = async (req, res) => {
     await review.save();
     return res.status(200).json({
       success: true,
-      alert: `Thank you for adding your review to the movie called ${review.title}`,
+      msg: `Thank you for adding your review to the movie called ${review.title}`,
       data: movieData,
       review,
     });
