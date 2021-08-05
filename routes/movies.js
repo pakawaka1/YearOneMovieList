@@ -4,8 +4,9 @@ const { getAllMovies, getOneMovie } = require('../controllers/movies');
 
 const router = express.Router();
 
-router.route('/').get(getAllMovies);
+// TO BE ADDED LATER AS AN ENHANCEMENT
+// router.route('/').get(getAllMovies);
 
-router.route('/movie').get(getOneMovie);
+router.route('/').get(getOneMovie);
 
 module.exports = router;
