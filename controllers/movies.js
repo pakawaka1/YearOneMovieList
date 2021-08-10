@@ -19,11 +19,10 @@ const HEADERS = {
 // };////////////////////////////////////////////////////////////////////////////////
 
 exports.getOneMovie = async (title) => {
-  title = 'the godfather';
-  const updatedTitle = title.replace(/\b\w/g, (c) => c.toUpperCase());
+  title = title.replace(/\b\w/g, (c) => c.toUpperCase());
   try {
     const titleResponse = await axios.get(URL, {
-      params: { t: updatedTitle },
+      params: { t: title },
       headers: HEADERS,
     });
     return titleResponse.data;

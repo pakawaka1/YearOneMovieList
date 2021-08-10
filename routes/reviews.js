@@ -4,7 +4,7 @@ const Review = require('../models/Review');
 
 const router = express.Router();
 
-router.route('/').get(getMovieReview);
+router.route('/search').get(getMovieReview);
 router.route('/addReview').put(addNewReview);
 
 module.exports = router;

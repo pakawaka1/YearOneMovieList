@@ -7,27 +7,26 @@ const path = require('path');
 // Load env vars
 dotenv.config({ path: './config/config.env' });
 
-// Route Files
-const movies = require('./routes/movies');
-const reviews = require('./routes/reviews');
+// // Route Files
+// const movies = require('./routes/movies');
+// const reviews = require('./routes/reviews');
 
 // initialize express
 const app = express();
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
 
 // // Handlebars
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
 // // Parse incomings data requestions
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // // set static folder
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// // set index to landing
-// app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
+// set index to landing
+app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
 //connect to DB
 const db = require('./config/database');
@@ -39,8 +38,7 @@ try {
 }
 
 // routes
-app.use('/', movies);
-app.use('/reviews', reviews);
+app.use('/reviews', require('./routes/reviews'));
 
 // port settings.
 const PORT = process.env.PORT || 5000;
