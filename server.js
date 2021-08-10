@@ -11,15 +11,6 @@ dotenv.config({ path: './config/config.env' });
 const movies = require('./routes/movies');
 const reviews = require('./routes/reviews');
 
-//connect to DB
-const db = require('./config/database');
-db.authenticate();
-try {
-  console.log('Database is connected...');
-} catch (err) {
-  console.log('Error: ' + err);
-}
-
 // initialize express
 const app = express();
 
@@ -35,6 +26,15 @@ const app = express();
 
 // // set index to landing
 // app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
+
+//connect to DB
+const db = require('./config/database');
+db.sequelize.sync();
+try {
+  console.log('Database is connected...');
+} catch (err) {
+  console.log('Error: ' + err);
+}
 
 // routes
 app.use('/', movies);
