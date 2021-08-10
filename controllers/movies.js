@@ -19,6 +19,7 @@ const HEADERS = {
 // };////////////////////////////////////////////////////////////////////////////////
 
 exports.getOneMovie = async (title) => {
+  title = 'get shorty';
   const updatedTitle = title.replace(/\b\w/g, (c) => c.toUpperCase());
   try {
     const titleResponse = await axios.get(URL, {

@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors');
-const axios = require('axios');
+const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 const path = require('path');
 
 // Load env vars
@@ -11,27 +11,34 @@ dotenv.config({ path: './config/config.env' });
 const movies = require('./routes/movies');
 const reviews = require('./routes/reviews');
 
+//connect to DB
+const db = require('./config/database');
+db.authenticate();
+try {
+  console.log('Database is connected...');
+} catch (err) {
+  console.log('Error: ' + err);
+}
+
+// initialize express
 const app = express();
 
-const corsOptions = {
-  origin: 'http://localhost:5001',
-};
+// // Handlebars
+// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// app.set('view engine', 'handlebars');
 
-app.use(cors(corsOptions));
+// // Parse incomings data requestions
+// app.use(bodyParser.urlencoded({ extended: false }));
 
-// Parse incomings data requests
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// // set static folder
+// app.use(express.static(path.join(__dirname, 'public')));
 
-// set static folder
-app.use(express.static(path.join(__dirname, 'src')));
+// // set index to landing
+// app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
-// Db Models
-const db = require('./models');
-db.sequelize.sync();
-
-app.use('/api/v1/movie', movies);
-app.use('/api/v1/movie/reviews', reviews);
+// routes
+app.use('/', movies);
+app.use('/reviews', reviews);
 
 // port settings.
 const PORT = process.env.PORT || 5000;

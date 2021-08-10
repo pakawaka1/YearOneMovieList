@@ -10,9 +10,9 @@ const showAllMovies = () => {
   //bring movie.getAllMovies(input.value);
 };
 
-const showOneMovie = () => {
-  //async all this...
-  //   review.getMovieReview(input.value);
+const showOneMovie = async () => {
+  const movie = await review.getMovieReview(input.value);
+  if (!movie) return alert(`There is no movie with the title ${input.value}`);
 };
 
 input.addEventListener('keyup', showAllMovies, false);

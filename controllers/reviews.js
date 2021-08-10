@@ -1,24 +1,29 @@
 const movie = require('./movies');
-const db = require('../models');
+const db = require('../models/Review');
 const Review = db.reviews;
 
 exports.getMovieReview = async (req, res) => {
   const movieData = await movie.getOneMovie();
+  let movieInfo = {
+    title: movieData.Title,
+    director: movieData.Director,
+    year: movieData.Year,
+    description: movieData.Plot,
+  };
   try {
     const review = await Review.findOne({
       where: { title: movieData.Title },
     });
     if (movieData && review) {
-      return res.status(200).json({
-        success: true,
-        data: movieData,
-        review,
+      res.render('movieInfo', {
+        movieInfo,
+        thumbUp: review.thumbsUp,
+        thumbsDown: review.thumbsDown,
       });
     }
     if (movieData && !review) {
-      return res.status(200).json({
-        success: true,
-        data: movieData,
+      res.render('movieInfo', {
+        movieInfo,
       });
     }
   } catch (err) {
@@ -43,5 +48,7 @@ exports.addNewReview = async (req, res) => {
     });
   } catch (err) {
     console.error(err);
+  } finally {
+    res.redirect('/reviews');
   }
 };
