@@ -13,13 +13,15 @@ const reviews = require('./routes/reviews');
 
 // initialize express
 const app = express();
+app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
 
 // // Handlebars
 // app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // app.set('view engine', 'handlebars');
 
 // // Parse incomings data requestions
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // // set static folder
 // app.use(express.static(path.join(__dirname, 'public')));
