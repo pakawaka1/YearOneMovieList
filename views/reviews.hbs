@@ -3,27 +3,34 @@
     {{#with reviews}}
         <div class="review">
             <div class="row">
-                <div class="column">
+                <div class="column-reverse">
                     <h3>Title:  {{title}}</h3>
                     <p>Director:  {{director}}</p>
                     <p>Release Year: {{year}}</p>
                     <p>Description: {{description}}</p>
                     <p>Thumbs Up: {{thumbsUp}}</p>
                     <p class ='lastPTag'>Thumbs Down: {{thumbsDown}}</p>
-                    <a href="/reviews/add" class="btn btn-reverse">Add Review</a>
-
-                    
-                    {{!-- <form>
-                        <h3>Please add a review:</h3>
-                        <input type="radio" id="thumbsUp" name="thumbsUp" value="thumbsUp">
-                        <label for="thumbsUp">Thumbs Up</label>
-                        <input type="radio" id="thumbsDown" name="thumbsDown" value="thumbsDown">
-                        <label for="thumbsDown">ThumbsDown<label>
-                        <input class='submit' type="submit" value="Submit" formaction="reviews/add">
-                    </form> --}}
+                    <button class="btn btn-reverse">Add Review</button>
                 </div>
                 <img src={{poster}} width="300" height="450">
             </div>
+                <div class="modal" id="">
+                    <div class="review">
+                        <h3>Please add a review:</h3>
+                        <form action="">
+                            <div class="row">
+                                <div class="column-reverse">
+                                    <input class='submit' type="submit" value="REDO" formaction="reviews/add">
+                                    <input class='submit' type="submit" value="Submit" formaction="reviews/add">
+                                </div>
+                            </div>
+                            <input type="radio" id="thumbsUp" name="thumbsUp" value="thumbsUp">
+                            <label for="thumbsUp">Thumbs Up</label>
+                            <input type="radio" id="thumbsDown" name="thumbsDown" value="thumbsDown">
+                            <label for="thumbsDown">ThumbsDown<label>
+                        </form>
+                    </div>
+                </div>
         </div>
      {{/with}}
 </section>
