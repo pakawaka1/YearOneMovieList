@@ -5,24 +5,31 @@ const HEADERS = {
   'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com',
 };
 
-// TO BE ADDED LATER /////////////////////////////////////////////////////
-// exports.getAllMovies = async (searchItem) => {
-//   try {
-//     const searchResponse = await axios.get(URL, {
-//       params: { s: searchItem },
-//       headers: HEADERS,
-//     });
-//     return searchResponse.data;
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };////////////////////////////////////////////////////////////////////////////////
+exports.getAllMovies = async (req, res) => {
+  let { title } = req.query;
+  try {
+    let movies = await axios.get(URL, {
+      params: { s: title },
+      headers: HEADERS,
+    });
+    if (movies) {
+      movies = movies.data.Search;
+      movies = movies.filter((movie) => movie.Poster !== 'N/A');
+      if (movies.Poster !== 'N/A') {
+        res.render('movies', {
+          movies,
+        });
+      }
+    }
+  } catch (err) {
+    console.error(err);
+  }
+};
 
-exports.getOneMovie = async (title) => {
-  const updatedTitle = title.replace(/\b\w/g, (c) => c.toUpperCase());
+exports.getOneMovie = async (id) => {
   try {
     const titleResponse = await axios.get(URL, {
-      params: { t: updatedTitle },
+      params: { i: id },
       headers: HEADERS,
     });
     return titleResponse.data;
