@@ -39,10 +39,8 @@ a:hover {
   overflow: hidden;
 }
 
-.error {
-  padding: 5px;
-  border: #777 dotted 1px;
-  margin-bottom: 15px;
+.lastPTag {
+  margin-bottom: 30px;
 }
 
 /* Header */
@@ -64,11 +62,6 @@ header nav ul {
 header nav li {
   margin: 0 1rem;
 }
-
-/* Login Button Spacing */
-/*header nav li:last-child {
-  margin-left: -5px;
-}*/
 
 header.inner {
   background: var(--bg-color);
@@ -94,11 +87,17 @@ header.inner {
 .btn-reverse {
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
+  cursor: pointer;
 }
 
 .btn-reverse:hover {
   background: var(--primary-hover-color);
   border: 1px solid var(--primary-hover-color);
+}
+
+.column {
+  float: left;
+  width: 50%;
 }
 
 /* Home Search */
@@ -121,7 +120,7 @@ header.inner {
   text-align: center;
 }
 
-.search-form input[type='submit'] {
+.search-form input[class='submit'] {
   background: var(--primary-color);
   border: 1px solid var(--primary-color);
   color: #fff;
@@ -130,7 +129,7 @@ header.inner {
   transition: all 0.8s;
 }
 
-.search-form input[type='submit']:hover {
+.search-form input[class='submit']:hover {
   background: var(--primary-hover-color);
   border: 1px solid var(--primary-hover-color);
 }
@@ -156,12 +155,12 @@ header.inner {
   outline: 0;
 }
 
-input[type='search'] {
+input[class='search'] {
   flex-basis: 600px;
 }
 
-/* Gigs */
-.gig {
+/* review */
+.review {
   background: var(--bg-color);
   border-bottom: 4px solid var(--primary-color);
   color: #fff;
@@ -170,17 +169,17 @@ input[type='search'] {
   box-shadow: var(--box-shadow);
 }
 
-.gig ul {
+.review ul {
   list-style: none;
   display: flex;
 }
 
-.gig li {
+.review li {
   margin-right: 0.5rem;
   padding: 0.6rem;
 }
 
-.gig .tech span {
+.review .tech span {
   color: var(--primary-color);
 }
 
@@ -226,6 +225,10 @@ label {
   margin-bottom: 1.2rem;
 }
 
+.column {
+  float: right;
+  width: 50%;
+}
 /* Tablets */
 @media (max-width: 800px) {
   .container {
@@ -253,11 +256,11 @@ label {
     padding: 2.3rem;
   }
 
-  .gig ul {
+  .review ul {
     flex-direction: column;
   }
 
-  .gig .btn {
+  .review .btn {
     display: block;
     margin-top: 1rem;
     text-align: center;
@@ -270,7 +273,7 @@ label {
 }
 
 /* Smartphones */
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .container {
     padding: 1rem;
   }
@@ -300,4 +303,4 @@ label {
   .form-wrap.login-form {
     width: 100%;
   }
-}
+} */

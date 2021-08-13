@@ -1,22 +1,14 @@
 {
-  "name": "yearonemovielist",
+  "name": "movieapp",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": " A simple application to search for movie titles, and add rreviews to a database.",
+  "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
-    "dev": "nodemon server"
+    "dev": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pakawaka1/YearOneMovieList.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pakawaka1/YearOneMovieList/issues"
-  },
-  "homepage": "https://github.com/pakawaka1/YearOneMovieList#readme",
+  "author": "David Cervantes",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",

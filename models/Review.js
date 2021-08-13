@@ -1,15 +1,16 @@
-module.exports = (sequelize, DataTypes) => {
-  const Review = sequelize.define('review', {
-    title: {
-      type: DataTypes.STRING,
-      required: true,
-    },
-    thumbsUp: {
-      type: DataTypes.INTEGER,
-    },
-    thumbsDown: {
-      type: DataTypes.INTEGER,
-    },
-  });
-  return Review;
-};
+const Sequelize = require('sequelize');
+const db = require('../config/database');
+
+const Review = db.define('review', {
+  title: {
+    type: Sequelize.STRING,
+  },
+  thumbsUp: {
+    type: Sequelize.INTEGER,
+  },
+  thumbsDown: {
+    type: Sequelize.INTEGER,
+  },
+});
+
+module.exports = Review;

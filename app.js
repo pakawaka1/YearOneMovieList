@@ -7,41 +7,33 @@ const path = require('path');
 // Load env vars
 dotenv.config({ path: './config/config.env' });
 
-// // Route Files
-// const movies = require('./routes/movies');
-// const reviews = require('./routes/reviews');
+const db = require('./config/database');
+
+//test db
+db.authenticate()
+  .then(() => console.log('Database connected....'))
+  .catch((err) => console.log('Error:' + err));
 
 // initialize express
 const app = express();
-app.use(express.json());
 
-// // Handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+// Handlebars
+app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
+app.set('view engine', 'hbs');
 
-// // Parse incomings data requestions
+// body parser to parse JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// // set static folder
+// Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// set index to landing
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
-//connect to DB
-const db = require('./config/database');
-db.sequelize.sync();
-try {
-  console.log('Database is connected...');
-} catch (err) {
-  console.log('Error: ' + err);
-}
+app.use('/movies', require('./routes/movies'));
+app.use('/review', require('./routes/reviews'));
 
-// routes
-app.use('/reviews', require('./routes/reviews'));
-
-// port settings.
 const PORT = process.env.PORT || 5000;
+
 app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
