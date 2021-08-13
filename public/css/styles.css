@@ -43,6 +43,16 @@ a:hover {
   margin-bottom: 30px;
 }
 
+/*modal*/
+.modal {
+  width: 450px;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+}
+
 /* Header */
 header {
   display: flex;
@@ -95,8 +105,8 @@ header.inner {
   border: 1px solid var(--primary-hover-color);
 }
 
-.column {
-  float: left;
+.column-reverse {
+  float: right;
   width: 50%;
 }
 
