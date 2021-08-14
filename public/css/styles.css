@@ -39,18 +39,46 @@ a:hover {
   overflow: hidden;
 }
 
-.lastPTag {
+.p_last {
   margin-bottom: 30px;
 }
 
 /*modal*/
 .modal {
-  width: 450px;
+  width: 600px;
   position: fixed;
-  top: 15%;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #ccc;
+  transition: top 0.75s ease-in-out;
+  z-index: 5;
+}
+
+.modal.active {
+  top: 15%;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+}
+
+#modal-button {
+  margin-right: 10px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.2;
+}
+
+.overlay.active {
+  display: block;
 }
 
 /* Header */
@@ -235,10 +263,11 @@ label {
   margin-bottom: 1.2rem;
 }
 
-.column {
+.column-right {
   float: right;
   width: 50%;
 }
+
 /* Tablets */
 @media (max-width: 800px) {
   .container {
