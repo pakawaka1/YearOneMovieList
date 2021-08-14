@@ -2,37 +2,55 @@
     <h1>Movie Information</h1>
     {{#with reviews}}
         <div class="review">
-            <div class="row">
-                <div class="column-reverse">
+                <div class="column-right">
                     <h3>Title:  {{title}}</h3>
                     <p>Director:  {{director}}</p>
                     <p>Release Year: {{year}}</p>
                     <p>Description: {{description}}</p>
                     <p>Thumbs Up: {{thumbsUp}}</p>
-                    <p class ='lastPTag'>Thumbs Down: {{thumbsDown}}</p>
-                    <button class="btn btn-reverse">Add Review</button>
+                    <p class ='p_last'>Thumbs Down: {{thumbsDown}}</p>
+                    <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
                 </div>
                 <img src={{poster}} width="300" height="450">
-            </div>
-                <div class="modal" id="">
+                <div class="modal" id="addModal">
                     <div class="review">
-                        <h3>Please add a review:</h3>
-                        <form action="">
-                            <div class="row">
-                                <div class="column-reverse">
-                                    <input class='submit' type="submit" value="REDO" formaction="reviews/add">
-                                    <input class='submit' type="submit" value="Submit" formaction="reviews/add">
-                                </div>
-                            </div>
-                            <input type="radio" id="thumbsUp" name="thumbsUp" value="thumbsUp">
-                            <label for="thumbsUp">Thumbs Up</label>
-                            <input type="radio" id="thumbsDown" name="thumbsDown" value="thumbsDown">
-                            <label for="thumbsDown">ThumbsDown<label>
+                        <h3 class='modal-title'>Please add a review for: 
+                            <i>{{title}}</i>
+                        </h3>
+                        <div class="column-right">
+                            <input class='btn btn-reverse' id="modal-button" type="submit" value="Submit Review" form='addForm'>
+                            <button class="btn btn-reverse" id="cancel" data-target="#addModal">Cancel</button>
+
+                        </div>
+                        <form action="reviews/add" id='addForm'>
+                            <label for="thumbsUp">
+                                <input type="radio" id="thumbsUp" name="review" value="thumbsUp">
+                                Thumbs Up
+                            </label>
+                            <label for="thumbsDown">
+                                <input type="radio" id="thumbsDown" name="review" value="thumbsDown">
+                                Thumbs Down
+                            <label>
                         </form>
                     </div>
                 </div>
+                <div class="overlay"></div>
         </div>
      {{/with}}
 </section>
+<script>
+    const btn = document.querySelector("[data-target]");
+    const closeBtn = document.querySelector("#cancel");
+    const overlay = document.querySelector(".overlay");
 
+    btn.addEventListener("click", () => {
+        document.querySelector(btn.dataset.target).classList.add("active");
+        overlay.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        document.querySelector(btn.dataset.target).classList.remove("active");
+        overlay.classList.remove('active');
+    });
+</script>
  

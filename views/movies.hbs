@@ -2,18 +2,16 @@
     <h1>Movie Results</h1>
     {{#each movies}}
         <div class="review">
-            <div class="row">
-               <div class="column-reverse">
-                    <h3 name='title'>Title:  {{Title}}</h3>
-                    <p class='lastPTag'>Release Year: {{Year}}</p>
-                    <form action='/review'>
-                        <button class="btn btn-reverse" name="imdbID" value={{imdbID}} type='submit'>Get More Info</button>
-                    </form>
-                </div>
-                <img src={{Poster}} width="175" height="250">
+            <div class="column-right">
+                <h3 name='title'>Title:  {{Title}}</h3>
+                <p class='p_last'>Release Year: {{Year}}</p>
+                <form action='/review'>
+                    <button class="btn btn-reverse" name="imdbID" value={{imdbID}} type='submit'>Get More Info</button>
+                </form>
             </div>
+            <img src={{Poster}} width="175" height="250">
         </div>
-        {{else}}
+    {{else}}
         <p>There is no movie with this title....</p>
      {{/each}}
 </section>

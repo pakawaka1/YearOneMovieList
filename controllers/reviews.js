@@ -1,3 +1,6 @@
+const { LocalStorage } = require('node-localstorage');
+var localStorage = new LocalStorage('./scratch');
+
 const movie = require('./movies');
 const Review = require('../models/Review');
 
@@ -21,6 +24,7 @@ exports.getMovieReview = async (req, res) => {
     const getReviews = await Review.findOne({
       where: { title: movieData.Title },
     });
+    localStorage.setItem('title', reviews.title);
     if (movieData && getReviews) {
       reviews.thumbsUp = getReviews.thumbsUp;
       reviews.thumbsDown = getReviews.thumbsDown;
@@ -44,8 +48,8 @@ exports.getMovieReview = async (req, res) => {
 
 // Redoooooooo////////////////////////////////////////////////////////////////////////////////////
 exports.addNewReview = async (req, res) => {
-  const movieData = await movie.getOneMovie();
-  console.log(movieData);
+  const title = sessionStorage.getItem('title');
+  console.log(title);
 
   try {
     //   const [review, created] = await Review.findOrCreate({
