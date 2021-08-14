@@ -41,16 +41,16 @@
 <script>
     const btn = document.querySelector("[data-target]");
     const closeBtn = document.querySelector("#cancel");
+    const overlay = document.querySelector(".overlay");
 
     btn.addEventListener("click", () => {
-        document.querySelector(btn.dataset.target).classList.add("active")
+        document.querySelector(btn.dataset.target).classList.add("active");
+        overlay.classList.add("active");
     });
 
     closeBtn.addEventListener("click", () => {
-        document.querySelector(btn.dataset.target).classList.remove("active")
+        document.querySelector(btn.dataset.target).classList.remove("active");
+        overlay.classList.remove('active');
     });
-    
-
 </script>
-
  
