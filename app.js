@@ -29,9 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
-app.use('/movies', require('./routes/movies'));
-app.use('/review', require('./routes/reviews'));
-app.use('/review/add', require('./routes/add'));
+app.use('/', require('./routes/index'));
 
 const PORT = process.env.PORT || 5000;
 

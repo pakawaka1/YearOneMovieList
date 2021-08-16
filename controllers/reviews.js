@@ -31,8 +31,8 @@ exports.getMovieReview = async (req, res) => {
       });
     }
     if (movieData && !getReviews) {
-      reviews.thumbsUp = 'Not yet added...';
-      reviews.thumbsDown = 'None yet added...';
+      reviews.thumbsUp = 0;
+      reviews.thumbsDown = 0;
       res.render('reviews', {
         reviews,
       });

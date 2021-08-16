@@ -7,9 +7,11 @@
                     <p>Director:  {{director}}</p>
                     <p>Release Year: {{year}}</p>
                     <p>Description: {{description}}</p>
+                    {{!-- <iframe id="reviewStats"> --}}
                         <p>Thumbs Up: {{thumbsUp}}</p>
                         <p class ='p_last'>Thumbs Down: {{thumbsDown}}</p>
                         <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
+                    </iframe>
                 </div>
                 <img src={{poster}} width="300" height="450">
                 <div class="modal" id="addModal">
@@ -21,7 +23,7 @@
                             <input class='btn btn-reverse' id="modal-button" type="submit" value="Submit Review" form='addForm'>
                             <button class="btn btn-reverse" id="cancel" data-target="#addModal">Cancel</button>
                         </div>
-                        <form action="/review/add" id='addForm'>
+                        <form action="/movies/id" method=POST id='addForm'>
                             <label for="thumbsUp">
                                 <input type="radio" id="thumbsUp" name="review" value="thumbsUp">
                                 Thumbs Up
@@ -51,6 +53,11 @@
 
     closeBtn.addEventListener("click", () => {
         document.querySelector(btn.dataset.target).classList.remove("active");
+        overlay.classList.remove('active');
+    });
+    
+    addReviewBtn.addEventListener("click", () => {
+        document.querySelector("#reviewStats").contentWindow.location.reload(true);
         overlay.classList.remove('active');
     });
 </script>
