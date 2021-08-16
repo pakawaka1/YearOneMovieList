@@ -1,11 +1,11 @@
-<section id="movies" class='container'>
+<section class='container'>
     <h1>Movie Results</h1>
     {{#each movies}}
         <div class="review">
             <div class="column-right">
                 <h3 name='title'>Title:  {{Title}}</h3>
                 <p class='p_last'>Release Year: {{Year}}</p>
-                <form action='/review'>
+                <form action='/movies/id'>
                     <button class="btn btn-reverse" name="imdbID" value={{imdbID}} type='submit'>Get More Info</button>
                 </form>
             </div>
