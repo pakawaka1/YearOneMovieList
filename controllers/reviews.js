@@ -17,15 +17,11 @@ exports.getMovieReview = async (req, res) => {
     thumbsUp: null,
     thumbsdDown: null,
   };
-  localStorage.setItem('title', movieData.title);
+  localStorage.setItem('title', reviews.title);
   localStorage.setItem('ifReview', false);
   try {
     const getReviews = await Review.findOne({
       where: { title: movieData.Title },
-    });
-    localStorage.setItem('movieReview', {
-      title: reviews.title,
-      review: false,
     });
     if (movieData && getReviews) {
       reviews.thumbsUp = getReviews.thumbsUp;
