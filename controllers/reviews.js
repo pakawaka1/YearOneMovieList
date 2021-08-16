@@ -8,9 +8,6 @@ const Review = require('../models/Review');
 exports.getMovieReview = async (req, res) => {
   let { imdbID } = req.query;
   const movieData = await movie.getOneMovie(imdbID);
-  // let description = movieData.Plot;
-  // const endIndex = description.lastIndexOf('.');
-  // description = description.substring(0, endIndex + 1);
   let reviews = {
     title: movieData.Title,
     director: movieData.Director,
