@@ -7,9 +7,9 @@
                     <p>Director:  {{director}}</p>
                     <p>Release Year: {{year}}</p>
                     <p>Description: {{description}}</p>
-                    <p>Thumbs Up: {{thumbsUp}}</p>
-                    <p class ='p_last'>Thumbs Down: {{thumbsDown}}</p>
-                    <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
+                        <p>Thumbs Up: {{thumbsUp}}</p>
+                        <p class ='p_last'>Thumbs Down: {{thumbsDown}}</p>
+                        <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
                 </div>
                 <img src={{poster}} width="300" height="450">
                 <div class="modal" id="addModal">
@@ -20,9 +20,8 @@
                         <div class="column-right">
                             <input class='btn btn-reverse' id="modal-button" type="submit" value="Submit Review" form='addForm'>
                             <button class="btn btn-reverse" id="cancel" data-target="#addModal">Cancel</button>
-
                         </div>
-                        <form action="reviews/add" id='addForm'>
+                        <form action="/review/add" id='addForm'>
                             <label for="thumbsUp">
                                 <input type="radio" id="thumbsUp" name="review" value="thumbsUp">
                                 Thumbs Up
@@ -42,9 +41,11 @@
     const btn = document.querySelector("[data-target]");
     const closeBtn = document.querySelector("#cancel");
     const overlay = document.querySelector(".overlay");
+    const addReviewBtn = document.querySelector("#modal-button")
 
     btn.addEventListener("click", () => {
         document.querySelector(btn.dataset.target).classList.add("active");
+
         overlay.classList.add("active");
     });
 

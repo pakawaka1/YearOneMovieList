@@ -12,14 +12,17 @@ exports.getAllMovies = async (req, res) => {
       params: { s: title },
       headers: HEADERS,
     });
-    if (movies) {
-      movies = movies.data.Search;
+    movies = movies.data.Search;
+    if (movies !== undefined) {
       movies = movies.filter((movie) => movie.Poster !== 'N/A');
-      if (movies.Poster !== 'N/A') {
-        res.render('movies', {
-          movies,
-        });
-      }
+      res.render('movies', {
+        movies,
+      });
+    }
+    if (movies === undefined) {
+      res.render('movies', {
+        title,
+      });
     }
   } catch (err) {
     console.error(err);
