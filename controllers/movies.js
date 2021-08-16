@@ -12,8 +12,8 @@ exports.getAllMovies = async (req, res) => {
       params: { s: title },
       headers: HEADERS,
     });
-    if (movies) {
-      movies = movies.data.Search;
+    movies = movies.data.Search;
+    if (movies !== undefined) {
       movies = movies.filter((movie) => movie.Poster !== 'N/A');
       if (movies.Poster !== 'N/A') {
         res.render('movies', {
@@ -25,7 +25,6 @@ exports.getAllMovies = async (req, res) => {
     console.error(err);
   }
 };
-
 exports.getOneMovie = async (id) => {
   try {
     const titleResponse = await axios.get(URL, {
