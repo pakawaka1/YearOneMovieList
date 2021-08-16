@@ -25,7 +25,8 @@ exports.getAllMovies = async (req, res) => {
     console.error(err);
   }
 };
-exports.getOneMovie = async (id) => {
+
+const getOneMovie = async (id) => {
   try {
     const titleResponse = await axios.get(URL, {
       params: { i: id },
