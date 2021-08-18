@@ -41,14 +41,14 @@ A full stack application which allows users to search, find information and add 
      - After, run this command to set our primary keys and owner:
               
            
-           `ALTER TABLE ONLY public.reviews ADD CONSTRAINT reviews_pkey PRIMARY KEY (id);`
+           ALTER TABLE ONLY public.reviews ADD CONSTRAINT reviews_pkey PRIMARY KEY (id);
           
            
           ![Screen Shot 2021-08-18 at 10 40 24 AM](https://user-images.githubusercontent.com/29390297/129946198-3aad12ad-4554-4579-8c0c-393dbfa6e787.png)
 
 
 
-           `ALTER TABLE public.reviews OWNER TO postgres;`
+           ALTER TABLE public.reviews OWNER TO postgres;
            
           
           ![Screen Shot 2021-08-18 at 10 48 03 AM](https://user-images.githubusercontent.com/29390297/129947061-0b4e8c81-78b5-47d0-8f3c-38a36c779af7.png)
