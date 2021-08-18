@@ -26,7 +26,7 @@ A full stack application which allows users to search, find information and add 
           `\c moviereviews;`
        
        
-       ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
+      ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
        
 
     - Our tables will be created in the app using Sequelize's sync() method.
@@ -54,7 +54,7 @@ A full stack application which allows users to search, find information and add 
      - Using Sequelize's sync() method, I was not able to use a variable for my password, so you may need to manually insert it as `config/db.js`
      
           
-          ![Screen Shot 2021-08-18 at 11 37 34 AM](https://user-images.githubusercontent.com/29390297/129953644-252bea3e-fd02-4317-a186-c424b7e4b320.png)
+       ![Screen Shot 2021-08-18 at 11 37 34 AM](https://user-images.githubusercontent.com/29390297/129953644-252bea3e-fd02-4317-a186-c424b7e4b320.png)
     
     
     - Now run the command `nodemon` to start the server at http://localhost:5000/.
@@ -63,8 +63,8 @@ A full stack application which allows users to search, find information and add 
   4.  App Usage
 
        - Here is the homepage:  
-       
-         <img width="844" alt="Screen Shot 2021-08-18 at 11 46 53 AM" src="https://user-images.githubusercontent.com/29390297/129954769-d64763b6-a45e-432a-ae52-982db77371be.png">
+         
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 46 53 AM" src="https://user-images.githubusercontent.com/29390297/129954769-d64763b6-a45e-432a-ae52-982db77371be.png">
          
          
          
@@ -73,7 +73,7 @@ A full stack application which allows users to search, find information and add 
         
         
         
-        <img width="844" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
         
          
          
@@ -81,7 +81,7 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="844" alt="Screen Shot 2021-08-18 at 11 51 47 AM" src="https://user-images.githubusercontent.com/29390297/129955456-3b6aa453-91ff-4fee-8143-d1d0bd9ad963.png">
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 51 47 AM" src="https://user-images.githubusercontent.com/29390297/129955456-3b6aa453-91ff-4fee-8143-d1d0bd9ad963.png">
          
          
         
@@ -89,7 +89,7 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="844" alt="Screen Shot 2021-08-18 at 11 53 38 AM" src="https://user-images.githubusercontent.com/29390297/129955661-dc555549-158c-4a93-888b-b33761663b17.png">
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 53 38 AM" src="https://user-images.githubusercontent.com/29390297/129955661-dc555549-158c-4a93-888b-b33761663b17.png">
          
          
          
@@ -97,12 +97,12 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="422" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
+       <img width="422" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
          
  
  
  
-         <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
          
          
          
@@ -111,12 +111,12 @@ A full stack application which allows users to search, find information and add 
          
         
         
-         <img width="422" alt="Screen Shot 2021-08-18 at 11 57 48 AM" src="https://user-images.githubusercontent.com/29390297/129956180-44ae648e-e892-48eb-8dfe-2a5d0868c3aa.png">
+       <img width="422" alt="Screen Shot 2021-08-18 at 11 57 48 AM" src="https://user-images.githubusercontent.com/29390297/129956180-44ae648e-e892-48eb-8dfe-2a5d0868c3aa.png">
 
 
 
 
-         <img width="844" alt="Screen Shot 2021-08-18 at 11 58 17 AM" src="https://user-images.githubusercontent.com/29390297/129956257-c7d750c5-b237-4a4e-91f4-4a011c5a8319.png">
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 58 17 AM" src="https://user-images.githubusercontent.com/29390297/129956257-c7d750c5-b237-4a4e-91f4-4a011c5a8319.png">
          
          
          
@@ -124,5 +124,5 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="422" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958723-1a489c8a-4ee2-4c46-b345-b0af6eb8a918.png">
+       <img width="422" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958723-1a489c8a-4ee2-4c46-b345-b0af6eb8a918.png">
    
