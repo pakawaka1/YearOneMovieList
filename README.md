@@ -37,13 +37,12 @@ A full stack application which allows users to search, find information and add 
     - Now in your chosen directory, run this command:
 
 
-               `git clone git@github.com:pakawaka1/YearOneMovieList.git`
+               git clone git@github.com:pakawaka1/YearOneMovieList.git
          
      -Next, run the following two commands:
                 
-                   `cd YearOneMovieList`
-                   
-                   `npm install`
+                   cd YearOneMovieList
+                   npm install
                    
      
            
