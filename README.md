@@ -100,6 +100,11 @@ A full stack application which allows users to search, find information and add 
          
          
          
+         
+         
+         
+         
+         
          <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
          
          
@@ -118,7 +123,7 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         Anytime I need to return to search:
+         - Anytime I need to return to search:
          
          
          
