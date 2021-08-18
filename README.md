@@ -1,4 +1,3 @@
-<img width="414" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958704-797cac20-fb2b-4323-98f0-ea96308ec4e1.png">
 # YearOneMovieList
 A full stack application which allows users to search, find information and add reviews for movies.
 
