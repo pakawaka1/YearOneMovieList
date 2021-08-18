@@ -1,0 +1,55 @@
+<section id="reviews" class="container">
+    <h1>Movie Information</h1>
+    {{#with reviews}}
+        <div class="review">
+            <div class="column-right">
+                <h3>Title:  {{title}}</h3>
+                <p>Director:  {{director}}</p>
+                <p>Release Year: {{year}}</p>
+                <p>Description: {{description}}</p>
+                <p>Thumbs Up: {{thumbsUp}}</p>
+                <p class ="p-last">Thumbs Down: {{thumbsDown}}</p>
+                <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
+            </div>
+            <img src={{poster}} width="300" height="450">
+            <div class="modal" id="addModal">
+                <div class="review">
+                    <h3 class="modal-title">Please add a review for: 
+                        <i>{{title}}</i>
+                    </h3>
+                    <div class="column-right" id="cancel" data-target="#addModal" >
+                        <input class="btn btn-reverse" id="modal-button" type="submit" value="Submit Review" form="addForm">
+                        <button class="btn btn-reverse">Cancel</button>
+                    </div>
+                    <form action="" method=POST id="addForm">
+                        <label for="thumbsUp">
+                            <input type="radio" id="thumbsUp" name="review" value="thumbsUp">
+                            Thumbs Up
+                        </label>
+                        <label for="thumbsDown">
+                            <input type="radio" id="thumbsDown" name="review" value="thumbsDown">
+                            Thumbs Down
+                        <label>
+                    </form>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+     {{/with}}
+</section>
+<script>
+    const openModal = document.querySelector("[data-target]");
+    const closeModal = document.querySelector("#cancel");
+    const overlay = document.querySelector(".overlay");
+
+    openModal.addEventListener("click", () => {
+        document.querySelector(openModal.dataset.target).classList.add("active");
+        overlay.classList.add("active");
+    });
+
+    closeModal.addEventListener("click", () => {
+        document.querySelector(openModal.dataset.target).classList.remove("active");
+        overlay.classList.remove("active");
+    });
+</script>
+ 
