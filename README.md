@@ -65,36 +65,12 @@ A full stack application which allows users to search, find information and add 
        Here is the homepage:  
        
          <img width="1423" alt="Screen Shot 2021-08-18 at 11 46 53 AM" src="https://user-images.githubusercontent.com/29390297/129954769-d64763b6-a45e-432a-ae52-982db77371be.png">
+         
+        In the search bar, I entered "godfather", hit the search button, and received these results: !
+        
+        <img width="1389" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
+        
+
 
       
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-100. First list item
-     - First nested list item
-
-100. First list item
-     - First nested list item
-
-100. First list item
-     - First nested list item
