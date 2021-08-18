@@ -28,36 +28,6 @@ A full stack application which allows users to search, find information and add 
        
        ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
        
-       
-     - Next, we will need to create a table called reviews with columns:
-
-
-          `CREATE TABLE public.reviews (id integer NOT NULL,title character varying(100),"thumbsUp" integer,"thumbsDown" integer,"createdAt" date,"updatedAt" date);`
-          
-     
-          ![Screen Shot 2021-08-18 at 10 31 54 AM](https://user-images.githubusercontent.com/29390297/129945093-dc6982e1-8973-4018-a8c9-f0807233b546.png)
-          
-     
-     - After, run this command to set our primary keys and owner:
-              
-           
-           ALTER TABLE ONLY public.reviews ADD CONSTRAINT reviews_pkey PRIMARY KEY (id);
-          
-           
-          ![Screen Shot 2021-08-18 at 10 40 24 AM](https://user-images.githubusercontent.com/29390297/129946198-3aad12ad-4554-4579-8c0c-393dbfa6e787.png)
-
-
-
-           ALTER TABLE public.reviews OWNER TO postgres;
-           
-          
-          ![Screen Shot 2021-08-18 at 10 48 03 AM](https://user-images.githubusercontent.com/29390297/129947061-0b4e8c81-78b5-47d0-8f3c-38a36c779af7.png)
-
-
-        
-
-
-
 
 
 
