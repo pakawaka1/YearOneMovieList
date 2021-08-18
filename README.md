@@ -8,16 +8,16 @@ A full stack application which allows users to search, find information and add 
 
 ### 1.  Requirements (including links for download):
 \
-\ - Node.js: https://nodejs.org/en/,
+\ -Node.js: https://nodejs.org/en/,
 \
 \
-2.  PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads,
+-PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads,
 \
 \
-3.  Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,
+-Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,
 \
 \
-4.  You will need an API key to connect to the movie database API I used:  https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative.
+-You will need an API key to connect to the movie database API I used:  https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative.
 \
 \
 B. Database Setup
