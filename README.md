@@ -72,6 +72,7 @@ A full stack application which allows users to search, find information and add 
         
         
         
+        
         <img width="1389" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
         
          
@@ -96,15 +97,11 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="702" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
+         <img width="844" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
          
-         
-         
-         
-         
-         
-         
-         
+ 
+ 
+ 
          <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
          
          
