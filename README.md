@@ -18,14 +18,14 @@ A full stack application which allows users to search, find information and add 
        
        
       <img width="581" alt="Screen Shot 2021-08-18 at 9 46 23 AM" src="https://user-images.githubusercontent.com/29390297/129939141-bce659d7-44fa-4f6f-b298-b76600c9cee9.png">
-      \
+      
       
      - Now we need to connect to the the new moviesreview database:
-       \
-       \
+       
+       
           `\c moviereviews;`
-       \
-       \
+       
+       
        ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
 
        
