@@ -28,12 +28,13 @@ A full stack application which allows users to search, find information and add 
        
        ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
        
+       
      - Next, we will need to create a table called reviews with columns:
 
 
           `CREATE TABLE public.reviews (id integer NOT NULL,title character varying(100),"thumbsUp" integer,"thumbsDown" integer,"createdAt" date,"updatedAt" date);`
      
-     ![Screen Shot 2021-08-18 at 10 31 54 AM](https://user-images.githubusercontent.com/29390297/129945093-dc6982e1-8973-4018-a8c9-f0807233b546.png)
+          ![Screen Shot 2021-08-18 at 10 31 54 AM](https://user-images.githubusercontent.com/29390297/129945093-dc6982e1-8973-4018-a8c9-f0807233b546.png)
 
 
        
