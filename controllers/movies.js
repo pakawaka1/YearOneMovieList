@@ -5,6 +5,7 @@ const HEADERS = {
   'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com',
 };
 
+// get all movies from API by title
 exports.getAllMovies = async (req, res) => {
   let { title } = req.query;
   try {
@@ -29,6 +30,7 @@ exports.getAllMovies = async (req, res) => {
   }
 };
 
+// get one movie using IMDB ID
 exports.getOneMovie = async (id) => {
   try {
     const titleResponse = await axios.get(URL, {

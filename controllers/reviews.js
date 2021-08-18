@@ -14,11 +14,10 @@ exports.getMovieReview = async (req, res) => {
     year: movieData.Year,
     poster: movieData.Poster,
     description: movieData.Plot,
-    thumbsUp: null,
-    thumbsdDown: null,
+    thumbsUp: 0,
+    thumbsDown: 0,
   };
   localStorage.setItem('title', reviews.title);
-  localStorage.setItem('ifReview', false);
   try {
     const getReviews = await Review.findOne({
       where: { title: movieData.Title },
@@ -31,8 +30,6 @@ exports.getMovieReview = async (req, res) => {
       });
     }
     if (movieData && !getReviews) {
-      reviews.thumbsUp = 0;
-      reviews.thumbsDown = 0;
       res.render('reviews', {
         reviews,
       });
