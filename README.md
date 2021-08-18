@@ -7,8 +7,7 @@ A full stack application which allows users to search, find information and add 
 \
 
 ### 1.  Requirements (including links for download):
-\
-\ -Node.js: https://nodejs.org/en/,
+        - Node.js: https://nodejs.org/en/,
 \
 \
 -PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads,
