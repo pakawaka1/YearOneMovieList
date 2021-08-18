@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = new Sequelize('movieDB', 'postgres', process.env.PASSWORD, {
+const db = new Sequelize('postgres', 'postgres', 'YOURPASSWORD', {
   host: 'localhost',
   dialect: 'postgres',
   operatorsAliases: 0,

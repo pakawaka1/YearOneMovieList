@@ -3,16 +3,10 @@ const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
+const db = require('./config/db');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
-
-const db = require('./config/database');
-
-//test db
-db.authenticate()
-  .then(() => console.log('Database connected....'))
-  .catch((err) => console.log('Error:' + err));
 
 // initialize express
 const app = express();
@@ -26,6 +20,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+//sync and connect to DB
+db.sync().then(() => {
+  console.log('Drop and re-sync db.');
+});
 
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
