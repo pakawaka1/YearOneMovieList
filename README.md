@@ -83,29 +83,38 @@ A full stack application which allows users to search, find information and add 
         
          Then, when I clicked on the "Add Review" button:  
          
+         
+         
          <img width="1126" alt="Screen Shot 2021-08-18 at 11 53 38 AM" src="https://user-images.githubusercontent.com/29390297/129955661-dc555549-158c-4a93-888b-b33761663b17.png">
          
+         
+         
          When I select "Thumbs Up" and click the "Submit Review" button:
+         
+         
          
          <img width="702" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
          
          
          <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
          
+         
+         
          When I select "Thumbs Down" and click the "Submit Review" button:
          
+        
         
          <img width="658" alt="Screen Shot 2021-08-18 at 11 57 48 AM" src="https://user-images.githubusercontent.com/29390297/129956180-44ae648e-e892-48eb-8dfe-2a5d0868c3aa.png">
 
 
+
          <img width="747" alt="Screen Shot 2021-08-18 at 11 58 17 AM" src="https://user-images.githubusercontent.com/29390297/129956257-c7d750c5-b237-4a4e-91f4-4a011c5a8319.png">
-
-
-
-
-
-
-
-
-      
+         
+         
+         
+         Anytime I need to return to search:
+         
+         
+         
+         <img width="702" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129956738-f58a70e7-40e0-4c63-b905-a9b211daf900.png">
 
