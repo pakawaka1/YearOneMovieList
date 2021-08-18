@@ -29,9 +29,27 @@ A full stack application which allows users to search, find information and add 
        ![Screen Shot 2021-08-18 at 9 51 08 AM](https://user-images.githubusercontent.com/29390297/129939450-97393d4d-daa5-4c10-a646-d5721d178d4d.png)
        
 
+    - Our tables will be created in the app using Sequelize's sync() method.
+    
+
+3.  App Setup (in Terminal)
+
+    - Now in your chosen directory, run this command:
 
 
+               `git clone git@github.com:pakawaka1/YearOneMovieList.git`
+         
+     -Next, run the following two commands:
+                
+                   `cd YearOneMovieList`
+                   
+                   `npm install`
+                   
+     
+           
+      
 
+    
 
 
 
