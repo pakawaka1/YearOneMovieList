@@ -33,8 +33,19 @@ A full stack application which allows users to search, find information and add 
 
 
           `CREATE TABLE public.reviews (id integer NOT NULL,title character varying(100),"thumbsUp" integer,"thumbsDown" integer,"createdAt" date,"updatedAt" date);`
+          
      
           ![Screen Shot 2021-08-18 at 10 31 54 AM](https://user-images.githubusercontent.com/29390297/129945093-dc6982e1-8973-4018-a8c9-f0807233b546.png)
+          
+     
+     - After, run this command to set our primary key: 
+              
+           
+           `ALTER TABLE ONLY public.reviews ADD CONSTRAINT reviews_pkey PRIMARY KEY (id);`
+          
+           
+          ![Screen Shot 2021-08-18 at 10 40 24 AM](https://user-images.githubusercontent.com/29390297/129946198-3aad12ad-4554-4579-8c0c-393dbfa6e787.png)
+
 
 
        
