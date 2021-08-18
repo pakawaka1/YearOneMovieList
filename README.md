@@ -3,8 +3,8 @@ A full stack application which allows users to search, find information and add 
 
 ## How to Get Started
 
-A.  Requirements (including links for download):
-    1.  Node.js: https://nodejs.org/en/,
+A.  Requirements (including links for download):                                                                                                                                 
+    1.  Node.js: https://nodejs.org/en/,                                                                                                                                       
     2.  PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads, 
     3.  Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,
     4.  You will need an API key to connect to the movie database API I used:  https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative.
