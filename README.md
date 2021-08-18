@@ -3,7 +3,7 @@ A full stack application which allows users to search, find information and add 
 
 ## How to Get Started
 
-A.  Requirements (including links for download)
+A.  Requirements (including links for download)\
     1.  Node.js: https://nodejs.org/en/
     2.  PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads\
     3.  Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,\
