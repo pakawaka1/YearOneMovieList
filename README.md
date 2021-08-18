@@ -3,7 +3,8 @@ A full stack application which allows users to search, find information and add 
 
 ## How to Get Started
 
-Requirements (including links for download):
+### Requirements (including links for download):
+    \
     \
     \
     1.  Node.js: https://nodejs.org/en/,
