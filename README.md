@@ -14,7 +14,6 @@ A full stack application which allows users to search, find information and add 
      - Once you are connected, run this command in the SQL Shell to create the database and tables for this app:
      \
      \
-     
           `CREATE DATABASE moviereviews;`
       \
       \
@@ -22,7 +21,6 @@ A full stack application which allows users to search, find information and add 
       \
       \
      - Now we need to connect to the the new moviesreview database:
-     
        \
        \
           `\c moviereviews;`
