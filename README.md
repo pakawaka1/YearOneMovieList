@@ -55,9 +55,17 @@ A full stack application which allows users to search, find information and add 
      
           
           ![Screen Shot 2021-08-18 at 11 37 34 AM](https://user-images.githubusercontent.com/29390297/129953644-252bea3e-fd02-4317-a186-c424b7e4b320.png)
+    
+    
+    - Now run the command `nodemon` to start the server at http://localhost:5000/.
+    
+  
+  4.  App Usage
 
-     
-           
+       Here is the homepage:  
+       
+         !<img width="118" alt="Screen Shot 2021-08-18 at 11 43 55 AM" src="https://user-images.githubusercontent.com/29390297/129954665-f43b3841-10e1-488d-879c-477c06b36ef5.png">
+
       
 
     
