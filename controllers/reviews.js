@@ -6,9 +6,9 @@ const Review = require('../models/Review');
 
 // get one movie with review
 exports.getMovieReview = async (req, res) => {
-  let { imdbID } = req.query;
+  const { imdbID } = req.query;
   const movieData = await movie.getOneMovie(imdbID);
-  let reviews = {
+  const reviews = {
     title: movieData.Title,
     director: movieData.Director,
     year: movieData.Year,

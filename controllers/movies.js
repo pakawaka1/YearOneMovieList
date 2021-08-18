@@ -7,7 +7,7 @@ const HEADERS = {
 
 // get all movies from API by title
 exports.getAllMovies = async (req, res) => {
-  let { title } = req.query;
+  const { title } = req.query;
   try {
     let movies = await axios.get(URL, {
       params: { s: title },

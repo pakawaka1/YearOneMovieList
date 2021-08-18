@@ -6,7 +6,7 @@ const Review = require('../models/Review');
 exports.addNewReview = async (req, res) => {
   const title = localStorage.getItem('title');
   try {
-    let [review, created] = await Review.findOrCreate({
+    const [review, created] = await Review.findOrCreate({
       where: { title },
       defaults: { thumbsUp: 0, thumbsDown: 0 },
     });
