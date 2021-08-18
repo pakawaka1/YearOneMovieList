@@ -14,13 +14,16 @@ A full stack application which allows users to search, find information and add 
      - Once you are connected, run this command in the SQL Shell to create the database and tables for this app:
      \
      \
+     
           `CREATE DATABASE moviereviews;`
       \
       \
       <img width="581" alt="Screen Shot 2021-08-18 at 9 46 23 AM" src="https://user-images.githubusercontent.com/29390297/129939141-bce659d7-44fa-4f6f-b298-b76600c9cee9.png">
       \
       \
+      
      - Now we need to connect to the the new moviesreview database:
+     
        \
        \
           `\c moviereviews;`
