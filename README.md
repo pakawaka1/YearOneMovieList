@@ -51,7 +51,7 @@ A full stack application which allows users to search, find information and add 
        ![Screen Shot 2021-08-18 at 11 35 19 AM](https://user-images.githubusercontent.com/29390297/129953330-d589a573-d13e-461c-8c4f-313ca1db8776.png)
 
 
-     - Using Sequelize's sync() method, I was not able to use a process.env variable for my password, so you may need to manually insert it as `config/db.js`
+     - Using Sequelize's sync() method, I was not able to use a variable for my password, so you may need to manually insert it as `config/db.js`
      
           
           ![Screen Shot 2021-08-18 at 11 37 34 AM](https://user-images.githubusercontent.com/29390297/129953644-252bea3e-fd02-4317-a186-c424b7e4b320.png)
