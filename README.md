@@ -97,7 +97,7 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="433" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
+         <img width="422" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129955869-89af149b-9721-4b6b-a3e3-f499397f142d.png">
          
  
  
