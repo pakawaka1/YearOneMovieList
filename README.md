@@ -17,7 +17,7 @@ A full stack application which allows users to search, find information and add 
            `CREATE DATABASE movieReviews;`
            \
            \
-           !<img width="5" alt="Screen Shot 2021-08-18 at 9 45 25 AM" src="https://user-images.githubusercontent.com/29390297/129938903-e113aa0c-3605-4f9e-9d3d-dbc91f2f3ec4.png">!
+           <img width="581" alt="Screen Shot 2021-08-18 at 9 46 23 AM" src="https://user-images.githubusercontent.com/29390297/129939141-bce659d7-44fa-4f6f-b298-b76600c9cee9.png">
 
 
      - Now we need to the new moviesReview database:
