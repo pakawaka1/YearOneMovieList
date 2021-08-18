@@ -45,10 +45,10 @@ A full stack application which allows users to search, find information and add 
                    npm install
         
     
-     -Then, in the config directory of the app, create a new file called `config.env`. In that file, include the following:
+     -Then, in the config directory of the app, create a new file called `config.env`. In that file, insert your password for Postgres as well as the RAPID_API key:
           
                     
-      ![Screen Shot 2021-08-18 at 11 27 00 AM](https://user-images.githubusercontent.com/29390297/129952215-d9b0c292-b3f2-45fe-9e8e-25177e84bb35.png)
+       ![Screen Shot 2021-08-18 at 11 27 00 AM](https://user-images.githubusercontent.com/29390297/129952215-d9b0c292-b3f2-45fe-9e8e-25177e84bb35.png)
 
      
            
