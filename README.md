@@ -1,3 +1,4 @@
+<img width="414" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958704-797cac20-fb2b-4323-98f0-ea96308ec4e1.png">
 # YearOneMovieList
 A full stack application which allows users to search, find information and add reviews for movies.
 
@@ -124,5 +125,8 @@ A full stack application which allows users to search, find information and add 
          
          
          
-         <img width="422" alt="Screen Shot 2021-08-18 at 11 54 48 AM" src="https://user-images.githubusercontent.com/29390297/129956738-f58a70e7-40e0-4c63-b905-a9b211daf900.png">
+         <img width="422" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958723-1a489c8a-4ee2-4c46-b345-b0af6eb8a918.png">
+
+         
+    
 
