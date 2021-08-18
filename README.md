@@ -1,13 +1,12 @@
 # YearOneMovieList
 A full stack application which allows users to search, find information and add reviews for movies.
-\
-\
+\\
 ## How to Get Started
 
 Requirements (including links for download):
     \
     1.  Node.js: https://nodejs.org/en/,
-    \
+    \\
     2.  PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads,
     \
     3.  Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,
