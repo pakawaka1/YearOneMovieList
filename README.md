@@ -12,8 +12,10 @@ A full stack application which allows users to search, find information and add 
 2. Database Setup
      - Once PostgreSQL is installed, we need to connect to the database.  This link will give you directions on connecting via psql or pgAdmin:  https://www.enterprisedb.com/postgres-tutorials/connecting-postgresql-using-psql-and-pgadmin.
      - Once you are connected, run this command in the SQL Shell to create the database and tables for this app:
+     \
+           -`CREATE DATABASE movieReviews;`
      
-     `CREATE DATABASE movieReviews;`
+     \
      ![Screen Shot 2021-08-18 at 9 24 01 AM](https://user-images.githubusercontent.com/29390297/129935394-795a27e4-9fd8-4868-b84a-1ac25679ada8.png)
 
 
