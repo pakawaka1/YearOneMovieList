@@ -1,9 +1,8 @@
 # YearOneMovieList
 A full stack application which allows users to search, find information and add reviews for movies.
-\
-\
+
 ## How to Get Started 
-\
+
 \
 1.  Requirements
      - Node.js: https://nodejs.org/en/,
