@@ -14,9 +14,7 @@ A full stack application which allows users to search, find information and add 
 \
 
 2. Database Setup
-     - Your favorite code editor.  I use Visual Studio Code:  https://code.visualstudio.com/download,
-
-    1.  Once PostgreSQL is installed, we need to connect to the database.  This link will give you directions on connecting using psql or pgAdmin
+     - Once PostgreSQL is installed, we need to connect to the database.  This link will give you directions on connecting using psql or pgAdmin
     \
     \
         https://www.enterprisedb.com/postgres-tutorials/connecting-postgresql-using-psql-and-pgadmin.
