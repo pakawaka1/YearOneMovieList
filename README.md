@@ -15,6 +15,7 @@ A full stack application which allows users to search, find information and add 
      \
      \
            `CREATE DATABASE movieReviews;`
+           \
            ![Screen Shot 2021-08-18 at 9 24 01 AM](https://user-images.githubusercontent.com/29390297/129935394-795a27e4-9fd8-4868-b84a-1ac25679ada8.png)
 
 
