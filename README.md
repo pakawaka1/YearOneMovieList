@@ -53,7 +53,6 @@ A full stack application which allows users to search, find information and add 
 
       <img width="844" alt="Screen Shot 2021-08-18 at 11 46 53 AM" src="https://user-images.githubusercontent.com/29390297/129954769-d64763b6-a45e-432a-ae52-982db77371be.png">
 
-
     - In the search bar, I entered "godfather", hit the search button, and received many results, including:
       <img width="844" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
 
@@ -69,14 +68,13 @@ A full stack application which allows users to search, find information and add 
 
       <img width="844" alt="Screen Shot 2021-08-18 at 11 56 22 AM" src="https://user-images.githubusercontent.com/29390297/129956006-4f75e5b2-42fc-4c8d-8cac-fb772ad87708.png">
          
-
-
     - When I select "Thumbs Down" and click the "Submit Review" button:
 
       <img width="422" alt="Screen Shot 2021-08-18 at 11 57 48 AM" src="https://user-images.githubusercontent.com/29390297/129956180-44ae648e-e892-48eb-8dfe-2a5d0868c3aa.png">
 
       <img width="844" alt="Screen Shot 2021-08-18 at 11 58 17 AM" src="https://user-images.githubusercontent.com/29390297/129956257-c7d750c5-b237-4a4e-91f4-4a011c5a8319.png">
 
-
-    - Anytime I need to return to search:
-      <img width="422" alt="Screen Shot 2021-08-18 at 11 51 42 AM" src="https://user-images.githubusercontent.com/29390297/129958723-1a489c8a-4ee2-4c46-b345-b0af6eb8a918.png">
+    - Anytime I need to return to search click on "Movie Finder":
+         
+      <img width="422" alt="Screen Shot 2021-08-18 at 11 24 22 PM" src="https://user-images.githubusercontent.com/29390297/130025639-73cfffff-0075-493c-ad90-ec5b51cc7525.png">
+  
