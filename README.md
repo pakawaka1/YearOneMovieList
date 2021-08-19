@@ -119,7 +119,7 @@ A full stack application which allows users to search, find information and add 
 
 
                   
-    - Anytime I need to return to search:
+    - Anytime I need to return to search click on "Movie Finder":
          
          
          
