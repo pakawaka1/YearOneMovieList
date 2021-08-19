@@ -4,8 +4,8 @@ const Review = require('../models/Review');
 
 // add new review to database
 exports.addNewReview = async (req, res) => {
-  const title = localStorage.getItem('title');
   try {
+    const title = localStorage.getItem('title');
     const [review, created] = await Review.findOrCreate({
       where: { title },
       defaults: { thumbsUp: 0, thumbsDown: 0 },
