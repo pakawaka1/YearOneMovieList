@@ -112,6 +112,10 @@ A full stack application which allows users to search, find information and add 
         
         
       <img width="422" alt="Screen Shot 2021-08-18 at 11 57 48 AM" src="https://user-images.githubusercontent.com/29390297/129956180-44ae648e-e892-48eb-8dfe-2a5d0868c3aa.png">
+      
+      
+      
+       <img width="844" alt="Screen Shot 2021-08-18 at 11 58 17 AM" src="https://user-images.githubusercontent.com/29390297/129956257-c7d750c5-b237-4a4e-91f4-4a011c5a8319.png">
 
 
                   
