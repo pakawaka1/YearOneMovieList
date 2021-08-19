@@ -3,13 +3,19 @@ const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
-const db = require('./config/db');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
 
 // initialize express
 const app = express();
+
+// db sync and connect
+const db = require('./config/db');
+
+db.sync().then(() => {
+  console.log('Drop and re-sync db.');
+});
 
 // Handlebars
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
@@ -21,11 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//sync and connect to DB
-db.sync().then(() => {
-  console.log('Drop and re-sync db.');
-});
-
+// set routes
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
 app.use('/', require('./routes/index'));
