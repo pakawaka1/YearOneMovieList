@@ -1,6 +1,3 @@
-const { LocalStorage } = require('node-localstorage');
-const localStorage = new LocalStorage('./scratch');
-
 const movie = require('./movies');
 const Review = require('../models/Review');
 
@@ -18,7 +15,6 @@ exports.getMovieReview = async (req, res) => {
       thumbsUp: 0,
       thumbsDown: 0,
     };
-    localStorage.setItem('title', reviews.title);
     const getReviews = await Review.findOne({
       where: { title: movieData.Title },
     });

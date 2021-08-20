@@ -16,6 +16,12 @@ A full stack application which allows users to search, find information and add 
     - Once PostgreSQL is installed, we need to connect to the database. This link will give you directions on connecting via psql or pgAdmin: https://www.enterprisedb.com/postgres-tutorials/connecting-postgresql-using-psql-and-pgadmin
 
     - Once you are connected, run this command in the SQL Shell to create the database and tables for this app:
+    
+      `CREATE DATABASE moviereviews;`
+      
+      <img width="581" alt="Screen Shot 2021-08-18 at 9 46 23 AM" src="https://user-images.githubusercontent.com/29390297/129939141-bce659d7-44fa-4f6f-b298-b76600c9cee9.png">
+
+    - Once you are connected, run this command in the SQL Shell to create the database and tables for this app:
 
       `CREATE DATABASE moviereviews;`
 
@@ -58,7 +64,15 @@ A full stack application which allows users to search, find information and add 
       <img width="844" alt="Screen Shot 2021-08-18 at 11 46 53 AM" src="https://user-images.githubusercontent.com/29390297/129954769-d64763b6-a45e-432a-ae52-982db77371be.png">
 
     - In the search bar, I entered "godfather", hit the search button, and received many results, including:
+    
+      <img width="844" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
 
+    - When I clicked on the "Get Info" button for "The Godfather: Part II", I received:
+    
+      <img width="844" alt="Screen Shot 2021-08-18 at 11 51 47 AM" src="https://user-images.githubusercontent.com/29390297/129955456-3b6aa453-91ff-4fee-8143-d1d0bd9ad963.png">
+
+    - Then, when I clicked on the "Add Review" button:
+    
       <img width="844" alt="Screen Shot 2021-08-18 at 11 49 34 AM" src="https://user-images.githubusercontent.com/29390297/129955137-213ee936-a1f0-457f-bbd7-2eb180a5a1dc.png">
 
     - When I clicked on the "Get Info" button for "The Godfather: Part II", I received:
