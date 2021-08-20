@@ -1,4 +1,3 @@
-const movie = require('./movies');
 const Review = require('../models/Review');
 
 // add new review to database
