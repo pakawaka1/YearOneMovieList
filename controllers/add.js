@@ -1,13 +1,13 @@
-const { LocalStorage } = require('node-localstorage');
-const localStorage = new LocalStorage('./scratch');
+const movie = require('./movies');
 const Review = require('../models/Review');
 
 // add new review to database
 exports.addNewReview = async (req, res) => {
   try {
-    const title = localStorage.getItem('title');
+    const { imdbID } = req.query;
+    const movieData = await movie.getOneMovie(imdbID);
     const [review, created] = await Review.findOrCreate({
-      where: { title },
+      where: { title: movieData.Title },
       defaults: { thumbsUp: 0, thumbsDown: 0 },
     });
     if (req.body.review === 'thumbsUp') review.thumbsUp++;
