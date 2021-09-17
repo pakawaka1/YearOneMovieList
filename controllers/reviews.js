@@ -1,5 +1,6 @@
 const movie = require('./movies');
 const Review = require('../models/Review');
+const asyncHandler = require('../middleware/async');
 
 // get one movie with review
 exports.getMovieReview = async (req, res) => {

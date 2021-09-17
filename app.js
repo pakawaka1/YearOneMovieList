@@ -13,7 +13,7 @@ const app = express();
 // db sync and connect
 const db = require('./config/db');
 
-db.sync().then(() => {
+db.authenticate().then(() => {
   console.log('Drop and re-sync db.');
 });
 
