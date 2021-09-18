@@ -6,10 +6,7 @@ const HEADERS = {
   'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com',
 };
 
-// get all movies from API by title
-
 //async wrapper added
-
 exports.getAllMovies = asyncHandler(async (req, res) => {
   const { title } = req.query;
   let movies = await axios.get(URL, {
@@ -17,17 +14,18 @@ exports.getAllMovies = asyncHandler(async (req, res) => {
     headers: HEADERS,
   });
   movies = movies.data.Search;
-  if (movies !== undefined) {
-    movies = movies.filter((movie) => movie.Poster !== 'N/A');
-    res.render('movies', {
-      movies,
-    });
-  }
-  if (movies === undefined) {
-    res.render('movies', {
-      title,
-    });
-  }
+  ///update error handling here////////////////////////////////////
+  console.log(movies);
+  // if (!movies) {
+  //   return next(
+  //     new ErrorResponse(`Movie not found with name of ${req.}`, 404)
+  //   );
+  // }
+  ////////////////////////////////////////end of error handlling
+  movies = movies.filter((movie) => movie.Poster !== 'N/A');
+  res.render('movies', {
+    movies,
+  });
 });
 
 // get one movie using IMDB ID
@@ -36,8 +34,13 @@ exports.getOneMovie = asyncHandler(async (id, req) => {
     params: { i: id },
     headers: HEADERS,
   });
-  return titleResponse.data;
-  // } catch (err) {
-  //   console.error(err);
+  // insert error handling here//////
+  console.log(titleResponse);
+  // if (!titleResponse) {
+  //   return next(
+  //     new ErrorResponse(`Movie not found with ID of ${req.params.id}.`, 404)
+  //   );
   // }
+  ////////////////////////////////////////////////////////////////////////////////
+  return titleResponse.data;
 });
