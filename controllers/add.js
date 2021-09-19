@@ -8,9 +8,6 @@ exports.addNewReview = asyncHandler(async (req, res, next) => {
     where: { title },
     defaults: { thumbsUp: 0, thumbsDown: 0 },
   });
-
-  /// FOR FUTURE SEQUELIZE ERROR HANDLING... GOES HERE////
-
   if (req.body[title] === 'thumbsUp') review.thumbsUp++;
   if (req.body[title] === 'thumbsDown') review.thumbsDown++;
   await review.save();
