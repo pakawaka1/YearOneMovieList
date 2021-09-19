@@ -16,11 +16,9 @@ exports.getAllMovies = asyncHandler(async (req, res, next) => {
   });
   movies = movies.data.Search;
   if (!movies) {
+    // /////////////////////find way to redirect to URL/////////////////////////////////////////////////////////////////////
     return next(
-      new ErrorResponse(
-        `Movie with name '${req.query.title}' was not found`,
-        404
-      )
+      new ErrorResponse(`Movie with name '${req.query.title}' not found`, 404)
     );
   }
   movies = movies.filter((movie) => movie.Poster !== 'N/A');
@@ -30,14 +28,14 @@ exports.getAllMovies = asyncHandler(async (req, res, next) => {
 });
 
 // get one movie using IMDB ID
-exports.getOneMovie = asyncHandler(async (id, req) => {
+exports.getOneMovie = asyncHandler(async (id, req, next) => {
   const titleResponse = await axios.get(URL, {
     params: { i: id },
     headers: HEADERS,
   });
   if (!titleResponse) {
     return next(
-      new ErrorResponse(`Movie not found with ID of ${req.params.id}.`, 404)
+      new ErrorResponse(`Movie with ID of '${req.params.id}' not found.`, 404)
     );
   }
   return titleResponse.data;
