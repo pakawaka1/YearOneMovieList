@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
+const errorHandler = require('./middleware/error');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -31,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
 app.use('/', require('./routes/index'));
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
