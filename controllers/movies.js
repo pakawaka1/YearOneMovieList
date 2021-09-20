@@ -1,6 +1,5 @@
 const axios = require('axios');
 const asyncHandler = require('../middleware/async');
-const ErrorResponse = require('../utils/errorResponse');
 const URL = 'https://movie-database-imdb-alternative.p.rapidapi.com/';
 const HEADERS = {
   'x-rapidapi-key': process.env.RAPIDAPI_KEY,
@@ -16,27 +15,18 @@ exports.getAllMovies = asyncHandler(async (req, res, next) => {
   });
   movies = movies.data.Search;
   if (!movies) {
-    // /////////////////////find way to redirect to URL/////////////////////////////////////////////////////////////////////
-    return next(
-      new ErrorResponse(`Movie with name '${req.query.title}' not found`, 404)
-    );
+    return next(res.status(404).redirect('back'));
   }
-  movies = movies.filter((movie) => movie.Poster !== 'N/A');
-  res.render('movies', {
+  res.status(200).render('movies', {
     movies,
   });
 });
 
 // get one movie using IMDB ID
-exports.getOneMovie = asyncHandler(async (id, req, next) => {
+exports.getOneMovie = asyncHandler(async (id, req) => {
   const titleResponse = await axios.get(URL, {
     params: { i: id },
     headers: HEADERS,
   });
-  if (!titleResponse) {
-    return next(
-      new ErrorResponse(`Movie with ID of '${req.params.id}' not found.`, 404)
-    );
-  }
   return titleResponse.data;
 });
