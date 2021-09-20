@@ -11,7 +11,11 @@
                 <p class ="p-last">Thumbs Down: {{thumbsDown}}</p>
                 <button class="btn btn-reverse" data-target="#addModal">Add Review</button>
             </div>
-            <img src={{poster}} width="300" height="450">
+             {{#if_eq poster 'N/A'}}
+                <img src={{poster}} width="300" height="450">
+            {{else}}                 
+                <img id="currentPhoto" width="300" height="400">
+            {{/if_eq}}
             <div class="modal" id="addModal">
                 <div class="review">
                     <h3 class="modal-title">Please add a review for: 

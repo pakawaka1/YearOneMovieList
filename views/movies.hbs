@@ -9,7 +9,11 @@
                     <button class="btn btn-reverse" name="imdbID" value={{imdbID}} type="submit">Get More Info</button>
                 </form>
             </div>
-            <img src={{Poster}} width="175" height="250">
+            {{#if_eq Poster 'N/A'}}
+                <img src={{Poster}} width="175" height="250">
+            {{else}}                 
+                <img id="currentPhoto" width="175" height="250">
+            {{/if_eq}}
         </div>
      {{/each}}
 </section>

@@ -17,15 +17,34 @@ db.authenticate().then(() => {
   console.log('Drop and re-sync db.');
 });
 
+const hbs = exphbs.create({
+  helpers: {
+    if_eq: function (a, b, opts) {
+      console.log(a);
+      console.log(b);
+      if (a !== b) {
+        console.log('yes');
+        return opts.fn(this);
+      } else {
+        console.log('no');
+        return opts.inverse(this);
+      }
+    },
+  },
+  defaultLayout: 'main',
+  extname: 'hbs',
+});
+
 // Handlebars
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
+app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 // body parser to parse JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Set static folder
+// Set static folders
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('views/images'));
 
 // set routes
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
