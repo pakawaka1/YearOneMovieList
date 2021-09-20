@@ -257,3 +257,7 @@ label {
   float: right;
   width: 50%;
 }
+
+#currentPhoto {
+  background: url('../img/no-image.gif') no-repeat center / cover;
+}
