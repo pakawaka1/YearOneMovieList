@@ -3,7 +3,7 @@ const Review = require('../models/Review');
 const asyncHandler = require('../middleware/async');
 
 // get one movie with review
-exports.getMovieReview = asyncHandler(async (req, res, next) => {
+exports.getMovieReview = asyncHandler(async (req, res) => {
   const { imdbID } = req.query;
   const movieData = await movie.getOneMovie(imdbID);
   const reviews = {
@@ -21,12 +21,12 @@ exports.getMovieReview = asyncHandler(async (req, res, next) => {
   if (movieData && getReviews) {
     reviews.thumbsUp = getReviews.thumbsUp;
     reviews.thumbsDown = getReviews.thumbsDown;
-    res.render('reviews', {
+    res.status(200).render('reviews', {
       reviews,
     });
   }
   if (movieData && !getReviews) {
-    res.render('reviews', {
+    res.status(200).render('reviews', {
       reviews,
     });
   }
